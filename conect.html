@@ -3,76 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A-TUBE</title>
+    <title>A-TUBE - Video Streaming Platform</title>
     <style>
-        /* Your existing styles here */
-
-        .user-options {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
 
-        .channel-options,
-        .playlist-options,
-        .subscription-options {
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .movie-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .movie-item {
+            margin-bottom: 20px;
+        }
+
+        .movie-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .movie-description {
+            margin-bottom: 10px;
+        }
+
+        .movie-iframe {
+            width: 100%;
+            height: 400px; /* Adjust the height as needed */
+        }
+
+        .upload-form {
             margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>A-TUBE - Video Streaming Platform</h1>
+    </header>
+    <main>
+        <ul class="movie-list">
+            <li class="movie-item">
+                <div class="movie-title">Good Will Hunting</div>
+                <div class="movie-description">A janitor at MIT has a gift for mathematics, but needs help from a psychologist to find direction in his life.</div>
+                <iframe class="movie-iframe" src="https://www.primevideo.com/dp/amzn1.dv.gti.16abddb6-6332-8874-2b0e-5e89f629b64e?autoplay=0&ref_=atv_cf_strg_wb" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li class="movie-item">
+                <div class="movie-title">Kung fu Hustle</div>
+                <div class="movie-description">A hapless gang of small-time crooks plans to take over a neighborhood, but their grand ambitions collide with martial arts masters.</div>
+                <iframe class="movie-iframe" src="https://www.primevideo.com/dp/amzn1.dv.gti.1ab52893-c5b9-6ee4-685f-641e291ea59a?autoplay=0&ref_=atv_cf_strg_wb" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li class="movie-item">
+                <div class="movie-title">Dangal</div>
+                <div class="movie-description">Former wrestler Mahavir Singh Phogat trains his daughters Geeta and Babita to become India's first world-class female wrestlers.</div>
+                <iframe class="movie-iframe" src="https://tv.apple.com/in/movie/dangal/umc.cmc.7krouhrf9iikjdbsqlvwa7wbh?action=play" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <!-- Add more movie items as needed -->
+        </ul>
 
-<header>
-    <h1>A-TUBE</h1>
-</header>
-
-<nav>
-    <a href="#">Home</a>
-    <a href="#">ChatGPT Official</a>
-    <!-- Additional navigation links can be added as needed -->
-</nav>
-
-<section>
-    <div class="user-options">
-        <div class="account-options">
-            <h2>Account Options</h2>
-            <ul>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Sign Up</a></li>
-            </ul>
+        <div class="upload-form">
+            <h2>Upload a Movie</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <label for="videoFile">Select a video file:</label>
+                <input type="file" id="videoFile" name="videoFile" accept="video/*">
+                <br>
+                <button type="submit">Upload</button>
+            </form>
         </div>
-
-        <div class="channel-options">
-            <h2>Channel Options</h2>
-            <ul>
-                <li><a href="#">Create Channel</a></li>
-                <li><a href="#">My Channels</a></li>
-            </ul>
-        </div>
-
-        <div class="playlist-options">
-            <h2>Playlist Options</h2>
-            <ul>
-                <li><a href="#">Create Playlist</a></li>
-                <li><a href="#">My Playlists</a></li>
-            </ul>
-        </div>
-
-        <div class="subscription-options">
-            <h2>Subscription Options</h2>
-            <ul>
-                <li><a href="tra.html">Subscriptions</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Rest of your content -->
-
-</section>
-
-<footer>
-    <p>&copy; 2024 A-TUBE. All rights reserved.</p>
-</footer>
-
+    </main>
+    <footer>
+        &copy; 2024 A-TUBE - All rights reserved.
+    </footer>
 </body>
 </html>
